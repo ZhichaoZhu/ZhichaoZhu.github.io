@@ -99,6 +99,16 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: cactus
 
+theme_config:
+  colorscheme: white
+
+  nav:
+    home: /
+    about: /about/
+    articles: /archives/
+    projects: https://github.com/ZhichaoZhu
+    search: /search/
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
