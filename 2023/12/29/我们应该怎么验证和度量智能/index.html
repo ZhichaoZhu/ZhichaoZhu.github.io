@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="当前以ChatGPT为代表的大语言模型实在是太火了。人们第一次发现机器可以基于上下文如此自然、流畅地与人交流，以至于在日常交谈的范畴里已经很难区分人和机器了。因此，通用人工智能 (artificial general intelligence，AGI)看起来似乎不再是一个遥不可及的幻想了。然而，关于这一点我仍心怀疑虑，因为我们对于“智能”是什么似乎并没有一个统一且完备的定义。 从目前人工智能, 特">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我们应该怎么验证和度量智能？">
+<meta property="og:url" content="https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/">
+<meta property="og:site_name" content="Zhichao Zhu">
+<meta property="og:description" content="当前以ChatGPT为代表的大语言模型实在是太火了。人们第一次发现机器可以基于上下文如此自然、流畅地与人交流，以至于在日常交谈的范畴里已经很难区分人和机器了。因此，通用人工智能 (artificial general intelligence，AGI)看起来似乎不再是一个遥不可及的幻想了。然而，关于这一点我仍心怀疑虑，因为我们对于“智能”是什么似乎并没有一个统一且完备的定义。 从目前人工智能, 特">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-12-29T15:19:10.000Z">
+<meta property="article:modified_time" content="2024-04-20T13:53:21.155Z">
+<meta property="article:author" content="Zhichao Zhu">
+<meta property="article:tag" content="思想实验">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>我们应该怎么验证和度量智能？</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">AboutMe</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Blogs</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=UwfuwtEAAAAJ&hl=zh-CN">GoogleScholar</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/12/29/how-to-write-acadamic_papers/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&text=我们应该怎么验证和度量智能？"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&is_video=false&description=我们应该怎么验证和度量智能？"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=我们应该怎么验证和度量智能？&body=Check out this article: https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&name=我们应该怎么验证和度量智能？&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&t=我们应该怎么验证和度量智能？"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        我们应该怎么验证和度量智能？
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Zhichao Zhu</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-12-29T15:19:10.000Z" class="dt-published" itemprop="datePublished">2023-12-29</time>
+        
+        (Updated: <time datetime="2024-04-20T13:53:21.155Z" class="dt-updated" itemprop="dateModified">2024-04-20</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Perspective/">Perspective</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/" rel="tag">思想实验</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>当前以ChatGPT为代表的大语言模型实在是太火了。人们第一次发现机器可以基于上下文如此自然、流畅地与人交流，以至于在日常交谈的范畴里已经很难区分人和机器了。<br>因此，通用人工智能 (artificial general intelligence，AGI)看起来似乎不再是一个遥不可及的幻想了。<br>然而，关于这一点我仍心怀疑虑，因为我们对于“智能”是什么似乎并没有一个统一且完备的定义。</p>
+<p>从目前人工智能, 特别是深度学习的进展和努力来看，智能似乎可以认为是做到人能做的事情：例如让模型回答一系列问题，比如做数学题，观察其回答的正确率、逻辑性、流畅度以及完整性等等。毫无疑问，这些确实是智能的表现。问题在于，我们无法判断模型究竟是真的拥有“智能”从而成功地解决了问题，还是仅仅是“拟合”了训练数据。因为这个隐患在于大模型的数据要求实在是太高了。据称OPEN AI 在训练ChatGPT时已经用尽了世界上所有可用的文本信息。拥有如此庞大的训练数据，测试阶段遇到数据泄露问题几乎是无法避免的。这里不得不提到杰夫·霍金斯在《新机器智能》中提到的一个思想实验：</p>
+<blockquote>
+<p>我对人工智能论断的质疑形成于我申请进入麻省理工学院学习那段时间。加州大学伯克利分校颇具影响力的哲学教授约翰·塞尔 (John Searle) 说，计算机不是也不可能是智能的。为了证明这一点，他在1980年设计了一个叫作“中文屋” (Chinese Room) 的思想实验。这个实验是这样的：假设你有一个房间，房间的一面墙上有一条窄缝，房间里面有一个只会说英语的人坐在桌子旁边。他手里有一本厚厚的说明书，以及数量足够多的铅笔和草稿纸。这本说明书上用英语写明了操作、分类和比较汉字的方法。请注意，说明书中没有介绍汉字的含义，只介绍了如何复制、擦除、重新排序、抄录汉字等。有人从房间外将一张纸从窄缝处塞了进来。上面用中文写着一个故事和与这个故事有关的问题。房间里的人不会说中文，也不认识汉字，但他拿起纸，按照说明书开始工作。他机械地按照说明书上的指令行事。指令有时告诉他在草稿纸上写字，有时又告诉他移动和擦除字符。这个人按照一条又一条的指令，书写和擦除字符，直到书中的指令告诉他，他的工作已经完成了。他的最终成果是一张写满了汉字的纸，他不知道这些汉字就是问题的答案。说明书告诉他，把这张纸从窄缝处递出去。他照做了，并想知道这乏味的一整套操作到底有什么含义。房间外，一个懂中文的人正在阅读递出的那张纸。他表示，这些答案都是正确的，甚至见解深刻。如果有人问他，这些答案是否出自一个理解了这个故事的聪明人，他一定会说是的。但是他说的对吗？谁理解了这个故事？肯定不是房间里的人。房间里的人不懂中文，不了解这个故事是关于什么的。理解这个故事的也不是那本说明书，那只是一本书，静静地放在写字台上，和一堆纸在一起。那么，理解是在何处发生的呢？塞尔的答案是，没有理解发生，只是一系列无意识的翻页和用铅笔在纸上划来划去的动作而已。现在将这个场景套用到人工智能身上：“中文屋”和数字计算机简直一模一样。人是CPU，无意识地执行指令，书是向CPU提供指令的软件程序，而在纸上划来划去相当于将信息存入存储器。因此，无论计算机设计得多么巧妙，哪怕能够通过产生与人相同的行为来模拟智能，它都没有理解力，也没有智能。塞尔明确表示他不知道什么是智能，他只是说不管智能是什么，计算机显然并不具备这一能力。– 《新机器智能》</p>
+</blockquote>
+<p>现在的大模型也面临类似的处境：一方面，由于目前的交互方式依然是人类发问，机器回答。理论上一个基于规则的问答系统，只要规则足够多足够好，它应该也能做到类似的事情。另一方面，当大模型训练完毕，其权重也完全固定下来，这意味着它的能力上限也确定了下来：它现在不能做的事情，在没有人工干预继续训练的情况下未来也不会做到。人的智能一个重要的体现就是能创造新的知识，即自发地学会自己本来不会的东西。那么，现在的大模型能通过无监督学习的方式不断改进自己的性能吗？如果大模型只具备在人的帮助下学会知识边界内确定性的东西而无法解决知识边界上的问题，那它充其量也不过是一个更加好用的搜索引擎而已。</p>
+<p>此外，智能还有很多不同的维度：数学、音乐、绘画、文学需要不同的智能，绝大部分人穷奇一生也不过在某一方向上取得比较出众的成就，现在AGI要求 All-in-One 式地在所有学科全方位地达到人类智能是否目标过于宏大了？此外，个体的智能和群体的智能也不一样。所谓“三个臭皮匠，顶个诸葛亮”。我们有可能通过聚合多个小模型达到一个大模型的效果吗？毕竟，训练几个“臭皮匠”的难度应该远远小于一个“诸葛亮”。Scaling law 目前也只是一个经验公式，难道只有堆规模实现智能这一条路吗？</p>
+<p>目前关于智能的测试，最耳熟能详的莫过于图灵测试：“一名测试者写下自己的问题，随后将问题以纯文本的形式（如计算机屏幕和键盘）发送给另一个房间中的一个人与一台机器。测试者根据他们的回答来判断哪一个是真人，哪一个是机器”。随着人工智能的突飞猛进，我相信很快ChatGPT就能以很高的概率通过图灵测试了。到那个时候，下一个智能的测试应该是什么样的？我这里斗胆提这么几点：</p>
+<ol>
+<li>一个拥有智能的系统应能主动行动，在提出问题和需求前主动提供服务。</li>
+<li>一个拥有智能的系统应能主动学习，在没有外部干预的情况下改进自己的性能，甚至产生原本不具备的功能。</li>
+<li>一个拥有智能的系统应能主动创造，在没有外部指示的情况创造一系列自洽且能被理解的东西。</li>
+</ol>
+<p>这三点难度依次增加，特别是第三点：一系列自洽的造物是指这些创作共享这一套相似的内在逻辑，而不是偶然地随机产物。可以是文字、图像、音乐乃至于特殊的行为pattern, 但重要的是能被人感知和理解。这一点其实是因为我们的局限性，否则，我们大概率会认为机器“故障”了。若能做到这几点，哪怕是部分，我也会欣然承认它已经具备了智能。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">AboutMe</a></li>
+        
+          <li><a href="/archives/">Blogs</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=UwfuwtEAAAAJ&hl=zh-CN">GoogleScholar</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&text=我们应该怎么验证和度量智能？"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&is_video=false&description=我们应该怎么验证和度量智能？"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=我们应该怎么验证和度量智能？&body=Check out this article: https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&title=我们应该怎么验证和度量智能？"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&name=我们应该怎么验证和度量智能？&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://zhichaozhu.github.io/2023/12/29/%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%AA%8C%E8%AF%81%E5%92%8C%E5%BA%A6%E9%87%8F%E6%99%BA%E8%83%BD/&t=我们应该怎么验证和度量智能？"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    Zhichao Zhu
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">AboutMe</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Blogs</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=UwfuwtEAAAAJ&hl=zh-CN">GoogleScholar</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
