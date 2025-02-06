@@ -31,7 +31,7 @@
   "publications": [
     {
       "name": "Toward stochastic neural computing",
-      "publisher": "{arXiv",
+      "publisher": "arXiv",
       "releaseDate": "2023-05-23",
       "url": "https://arxiv.org/abs/2305.13982",
       "summary": "We developed a new kind of neural network known as the moment neural network (MNN), which depicts how the mean firing rate and the noise correlation of spiking neurons propogate through the network. We show that the MNN can be used to approximate the dynamics of a spiking neural network (SNN) with a high degree of accuracy. As a result, the MNN is a promising theorectical tool to understand how SNN perform probabilistic computing."
