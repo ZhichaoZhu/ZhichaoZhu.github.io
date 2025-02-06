@@ -9,7 +9,7 @@
       value: Chinese, English
 
 - title: Education
-  type: time_table
+  type: time-table
   contents:
     - title: PhD
       institution: Fudan University, Shanghai, China
@@ -29,7 +29,7 @@
         - Description 2.
 
 - title: Experience
-  type: time_table
+  type: time-table
   contents:
     - title: Professor of Theoretical Physics
       institution: Institute for Advanced Study, Princeton University
@@ -80,7 +80,7 @@
         - Max Planck Medal
 
 - title: Academic Interests
-  type: nested_list
+  type: nested-list
   contents:
     - title: Topic 1.
       items:
