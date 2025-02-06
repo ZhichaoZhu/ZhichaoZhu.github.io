@@ -64,34 +64,29 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: <a href="https://github.com/ZhichaoZhu/moment-neural-network">MomentNeuralNetwork</a>
+      year: 2020-now
+      description: A new class of deep learning architecture which naturally generalizes rate-based neural networks to second order statistical moments.
 
 - title: Academic Interests
   type: nested-list
   contents:
-    - title: Topic 1.
+    - title: Brain-inspired Computing
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Physical Computing.
+        - Neuromorphic Computing.
+    - title: Computational Neuroscience
       items:
-        - Description 1.
-        - Description 2.
+        - Neural Coding
+        - Neural Plasticity
+    - title: Machine Learning
+      items:
+        - Uncertainty Quantification
+        - Bayesian Deep Learning
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Cycling
+    - Hiking
+    - Photographing 
