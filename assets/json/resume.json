@@ -1,12 +1,11 @@
 {
   "basics": {
     "name": "Zhichao Zhu",
-    "label": "Post Doctoral Researcher",
+    "label": "Neural Computing Physicist",
     "image": "",
     "email": "zachary_zhu@outlook.com",
-    
-    "url": "https://zhichaozhu.github.io/",
-    "summary": "A young researcher in the field of brain-inspired computing, with a strong background in computer science and physics. I am passionate about the development of brain-inspired computing and its applications in artificial intelligence.",
+    "ORCID": "0009-0001-4490-8980",
+    "summary": "I am a researcher focused on the theoretical foundations of intelligence in physical neural systems. My work investigates how representations, decisions, and learning emerge under constraints imposed by noise and energy, integrating perspectives from neuroscience, machine learning, and statistical physics.",
     "location": {
       "address": "No. 825, Zhangheng Road, Zhangjiang High Tech Park, Pudong New Area",
       "postalCode": "200433",
@@ -15,6 +14,14 @@
       "region": "Shanghai"
     }
   },
+
+    "work": [
+    { "position": "Post Doctoral Researcher",
+      "name": "Institute of Science and Technology for Brain-Inspired Intelligence, Fudan University",
+      "startDate": "2025-01-01",
+      "endDate": "2026-12-31"
+    }
+  ],
   "education": [
     {
       "institution": "Fudan University, Shanghai, China",
@@ -24,8 +31,7 @@
       "studyType": "PhD",
       "startDate": "2020-09-01",
       "endDate": "2024-12-30",
-      "score": "10",
-      "courses": ["Brain-inspired Computing"]
+      "thesis": "On probabilistic computation in spiking neural networks:  a moment-based paradigm"
     },
     {
       "institution": "University of Warwick, Coventry, UK",
@@ -78,6 +84,16 @@
       "summary": "The Forward-Forward (FF) algorithm is a biologically plausible alternative to backpropagation (BP) for training neural networks. However, existing goodness functions used in FF neglect the correlated variability between neurons. We proposed a novel goodness function based on dimensionality compression that incorporates second-order statistical structure. Our approach promotes structured representations without the need for negative samples and achieves competitive performance compared to other non-BP methods."
     }
   ],
+    "projects": [
+    {
+      "name": "Moment Neural Network (MNN)",
+      "summary": "MNN is a new class of deep learning architecture which naturally generalizes rate-based neural networks to second order statistical moments. Once trained, the parameters of the MNN can be directly used to recover the corresponding SNN without further fine-tuning. The trained model captures realistic firing statistics of biological neurons including broadly distributed firing rates and Fano factors as well as weak pairwise correlation.",
+      "highlights": ["Brain-inspired Intelligence", "Neural Coding", "Probabilistic Computing", "Noise Correlation"],
+      "startDate": "2020-09-01",
+      "endDate": "Today",
+      "url": "https://github.com/ZhichaoZhu/moment-neural-network"
+    }
+  ],
 
   "languages": [
     {
@@ -115,7 +131,7 @@
       "icon": "fa-solid fa-brain",
       "keywords": [
         "Neural Coding",
-        "Free Energy Principle"
+        "Predictive Coding"
       ]
     }
   ],
@@ -131,16 +147,6 @@
     {
       "name": "Dr. Yang Qi",
       "icon": "fa-solid fa-thumbtack"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Moment Neural Network (MNN)",
-      "summary": "MNN is a new class of deep learning architecture which naturally generalizes rate-based neural networks to second order statistical moments. Once trained, the parameters of the MNN can be directly used to recover the corresponding SNN without further fine-tuning. The trained model captures realistic firing statistics of biological neurons including broadly distributed firing rates and Fano factors as well as weak pairwise correlation.",
-      "highlights": ["Brain-inspired Intelligence", "Neural Coding", "Probabilistic Computing", "Noise Correlation"],
-      "startDate": "2020-09-01",
-      "endDate": "Today",
-      "url": "https://github.com/ZhichaoZhu/moment-neural-network"
     }
   ]
 }
