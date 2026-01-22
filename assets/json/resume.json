@@ -41,8 +41,7 @@
       "studyType": "MSc",
       "startDate": "2018-10-01",
       "endDate": "2019-10-01",
-      "score": "Distinction",
-      "courses": ["Computational Biology", "Data Mining", "Natural Language Processing"]
+      "score": "Distinction"
     },
     {
       "institution": "Northwestern Polytechnical University, Xi'an, China",
