@@ -30,10 +30,10 @@
   ],
   "publications": [
     {
-      "name": "Toward stochastic neural computing",
-      "publisher": "arXiv",
-      "releaseDate": "2023-05-23",
-      "url": "https://arxiv.org/abs/2305.13982",
+      "name": "Learning and Inference with Correlated Neural Variability",
+      "publisher": "PNAS Nexus",
+      "releaseDate": "2025-10-10",
+      "url": "https://doi.org/10.1093/pnasnexus/pgaf284",
       "summary": "We developed a new kind of neural network known as the moment neural network (MNN), which depicts how the mean firing rate and the noise correlation of spiking neurons propogate through the network. We show that the MNN can be used to approximate the dynamics of a spiking neural network (SNN) with a high degree of accuracy. As a result, the MNN is a promising theorectical tool to understand how SNN perform probabilistic computing."
     },
     {
@@ -49,6 +49,13 @@
       "releaseDate": "2025-01-09",
       "url": "https://direct.mit.edu/neco/article/doi/10.1162/neco_a_01733/127433",
       "summary": "Speed-Accraucy Trade-Off (SAT) is a fundamental property of decision-making in the brain, where the reaction time reflect an agent's uncertainty about the decision. We explained the SAT in the context of spiking neural networks with the help of MNN, and showed that an SNN learning to shape its decision confidence leads to shorter reaction time. By setting a reasonable stopping policy, the SNN can achieve the same performance with much shorter latency in average."
+    },
+    {
+      "name": "Stochastic Forward-Forward Learning through Representational Dimensionality Compression",
+      "publisher": "NeurIPS",
+      "releaseDate": "2025-11-15",
+      "url": "https://openreview.net/forum?id=RWkLsoLeuj&noteId=RWkLsoLeuj",
+      "summary": "The Forward-Forward (FF) algorithm is a biologically plausible alternative to backpropagation (BP) for training neural networks. However, existing goodness functions used in FF neglect the correlated variability between neurons. We proposed a novel goodness function based on dimensionality compression that incorporates second-order statistical structure. Our approach promotes structured representations without the need for negative samples and achieves competitive performance compared to other non-BP methods."
     }
   ],
 

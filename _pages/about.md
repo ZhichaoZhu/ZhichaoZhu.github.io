@@ -9,17 +9,17 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Institute of Science and Technology for Brain-Inspired Intelligence</p>
+    <p>Fudan University</p>
+    <p>Shanghai, China</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I study the foundations of brain-inspired intelligence from a theory-driven perspective. My primary research question is how physical neural systems realize computable representations, decision-making and learning under constraints of noise and energy. Rather than treating perception, inference and action as separate modules, I model intelligent systems as constrained observers—physical systems whose internal representations, decisions, and learning dynamics are shaped by noise, energetic limits, and the selective accessibility of statistical structure in the world.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+A central theme of my research is that meaning and functionality do not arise from raw information alone, but from selection processes that determine which statistical structures can persist and be acted upon. From this viewpoint, learning is inseparable from interaction: perception is already shaped by action, and efficient computation often relies on outsourcing complexity to environmental dynamics rather than resolving it internally. My work aims to clarify why correlation, nonlinearity, and embodiment are not implementation details, but necessary conditions for scalable and energy-efficient intelligence.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+By synthesizing ideas from neuroscience, machine learning, and theoretical physics, I seeks to provide a unifying conceptual framework for understanding biological and artificial learning systems—one that explains not only how systems learn, but why certain forms of learning are possible at all.
