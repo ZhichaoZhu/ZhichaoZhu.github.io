@@ -26,6 +26,26 @@
       "endDate": "2024-12-30",
       "score": "10",
       "courses": ["Brain-inspired Computing"]
+    },
+    {
+      "institution": "University of Warwick, Coventry, UK",
+      "location": "Coventry, UK",
+      "url": "https://warwick.ac.uk/",
+      "area": "Computer Science",
+      "studyType": "MSc",
+      "startDate": "2018-10-01",
+      "endDate": "2019-10-01",
+      "score": "Distinction",
+      "courses": ["Computational Biology", "Data Mining", "Natural Language Processing"]
+    },
+    {
+      "institution": "Northwestern Polytechnical University, Xi'an, China",
+      "location": "Xi'an, China",
+      "url": "https://en.nwpu.edu.cn/",
+      "area": "Environmental Engineering",
+      "studyType": "BSc",
+      "startDate": "2011-09-01",
+      "endDate": "2015-07-01"
     }
   ],
   "publications": [
@@ -76,8 +96,8 @@
       "name": "Physics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Stastitical Physics",
-        "Information Therodyanmics",
+        "Statistical Physics",
+        "Thermodynamics",
         "Complex Systems"
       ]
     },
@@ -106,6 +126,10 @@
     },
     {
       "name": "Professor Wenlian Lu",
+      "icon": "fa-solid fa-thumbtack"
+    },
+    {
+      "name": "Dr. Yang Qi",
       "icon": "fa-solid fa-thumbtack"
     }
   ],
