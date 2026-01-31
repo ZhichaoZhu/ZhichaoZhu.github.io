@@ -5,7 +5,7 @@
     "image": "",
     "email": "zachary_zhu@outlook.com",
     "ORCID": "0009-0001-4490-8980",
-    "summary": "I am a researcher focused on the theoretical foundations of intelligence in physical neural systems. My work investigates how representations, decisions, and learning emerge under constraints imposed by noise and energy, integrating perspectives from neuroscience, machine learning, and statistical physics.",
+    "summary": "I am a researcher studying the theoretical foundations of intelligence in physical neural systems from an observer-centric perspective. My work examines how representations, decisions, and learning emerge under constraints imposed by limited observation, noise, and energy, integrating insights from neuroscience, machine learning, and statistical physics. A central focus of my research is on stochastic spiking neural networks, where correlated neural variability and low-order statistical structure define the computational interface available to the observer.",
     "location": {
       "address": "No. 825, Zhangheng Road, Zhangjiang High Tech Park, Pudong New Area",
       "postalCode": "200433",
@@ -132,20 +132,6 @@
         "Neural Coding",
         "Predictive Coding"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor Jianfeng Feng",
-      "icon": "fa-solid fa-thumbtack"
-    },
-    {
-      "name": "Professor Wenlian Lu",
-      "icon": "fa-solid fa-thumbtack"
-    },
-    {
-      "name": "Dr. Yang Qi",
-      "icon": "fa-solid fa-thumbtack"
     }
   ]
 }
