@@ -1,0 +1,31 @@
+---
+layout: post
+title: Information, Interface and Energy - Why Complex Information Is Energetically Free
+date: 2026-03-17
+description:
+tags:
+  - Interface
+  - Energy
+  - Structure
+categories: essay
+---
+>“The meaning of ‘information’ here is in the correlation that an interaction establishes between two systems.”
+       — Carlo Rovelli, _Relative Information at the Foundation of Physics_,  in _It from Bit or Bit from It? On Physics and Information_ (Springer, 2015)
+
+Information is not an abstract quantity attached to symbols or messages, but a **physical relation**: a correlation established through interaction between systems. When a thermometer responds to temperature, or a photoreceptor absorbs a photon, internal states become coupled to external conditions. In this sense, information is simply **dependence between physical variables**. This immediately raises a question: if information is just correlation, why do only some correlations matter for a system’s behavior?
+
+The answer lies in the **interface** through which interaction occurs. No system interacts with the world as a whole; instead, it couples to the environment through specific physical channels—sensory receptors, synapses, or measurement devices—that determine which aspects of the environment can influence it. As a result, a system does not access all correlations in the world, but only those that its interface can realize, so that its informational world is defined not by the environment itself, but by **what its interface allows it to access**.
+
+Importantly, the interface does not compute or infer information; it simply **exposes structure already present in the environment** by allowing it to leave traces in the system’s internal states. Through action—by moving or modulating its sensors—the system can reshape this coupling and thereby change what becomes accessible. For this to be possible, different environmental conditions must produce internal states that the system can distinguish. Maintaining this distinguishability requires energy, but this cost is determined by the **structure of the interface**—how many variables it tracks and how finely it resolves them—rather than by the complexity of the signals passing through it.
+
+A key consequence follows: once an interface is in place, it can carry not only simple signals but also **highly structured, high-order information**—temporal patterns, correlations, and dependencies—without additional energy cost. The complexity of the information is carried by the dynamics of the environment, not by the interface itself. This can be seen in a simple example: a single light sensor produces one scalar value whether the environment is simple or highly complex, and as long as it can distinguish brightness levels, its energetic cost remains essentially unchanged, even though the signal may contain arbitrarily rich temporal structure.
+
+The same principle holds in neural systems. A neuron receiving either simple or highly structured input operates through the same physical processes—maintaining ion gradients, integrating signals, and generating spikes—so that its energy consumption is tied to sustaining its interface rather than to the complexity of the signals it receives. At the level of the whole brain, neural activity can be understood as a **cascade of interfaces**, where sensory receptors transduce environmental signals that are subsequently transformed and propagated through successive neural populations. At each stage, the system does not reconstruct the world, but **receives and transforms structure already present in its inputs**, so that what costs energy is not complexity itself, but the capacity to distinguish.
+
+This observation becomes clearer when considering the origin of this structure. The patterns carried by neural activity are not generated internally in the first instance, but arise from the **external world**, whose dynamics—light fields, mechanical forces, chemical gradients—already contain rich organization. Through interaction, this structure drives the system’s internal states, so that the system does not need to create it, but only to remain coupled to it. In this sense, the system does not pay an energetic cost for the **existence of information**, but only for maintaining the interfaces that allow this information to be accessed.
+
+Each component in this hierarchy therefore acts as a constrained observer, whose activity is largely **driven by incoming signals** rather than internally constructed through exhaustive computation. Its energetic cost is dominated by maintaining its interface—not by the complexity of the input it receives. When such components are composed recursively, a striking consequence emerges: the total energetic cost of the system scales with the number and structure of its interfaces, rather than with the complexity of the task. Increasing the richness or variability of the input does not, by itself, increase the energetic burden, because that structure is supplied by the environment and propagated through the system.
+
+This leads to a different view of computation. Rather than constructing solutions from raw data, the system primarily **observes, filters, and propagates structure that is already present**, giving rise to a form of **recursive energetic efficiency**. Energy is spent locally, at each interface, to maintain distinguishability and reliable coupling, while the system avoids the far greater cost of internally generating the structure it depends on. As a result, total energy consumption grows with the size of the interface hierarchy, not with the combinatorial complexity of the problem.
+
+From this perspective, the remarkable efficiency of the brain follows naturally. Neural systems are continuously driven by structured environmental input and organized as hierarchies of interfaces that expose and propagate this structure. The brain is efficient not because it computes less, but because it does not need to generate the structure it uses—it is driven by it.
