@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Information, Interface and Energy - Why Complex Information Is Energetically Free
+title: The Decoupling of Information Complexity and Energy Cost
 date: 2026-03-17
 description:
 tags:
